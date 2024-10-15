@@ -1,0 +1,92 @@
+---
+import { Image } from "astro:assets";
+// import { PAGE_TITLE_ID } from '@astrojs/starlight/constants';
+import type { Props } from "@astrojs/starlight/props";
+import CallToAction from "@astrojs/starlight/components/CallToAction.astro";
+const { data } = Astro.props.entry;
+const { title = data.title, tagline, image, actions = [] } = data.hero || {};
+
+const imageAttrs = {
+  loading: "eager" as const,
+  decoding: "async" as const,
+  width: 400,
+  height: 400,
+  alt: image?.alt || "",
+};
+---
+
+<div class="gap-y-4 grid grid-cols-3">
+  <div class="h-[300px] w-[300px] relative">
+    <div class="relative top-0">
+      <img src="/ToggleTunes.png" class="h-10" />
+    </div>
+    <div class="flex flex-col justify-center h-full">
+      <p class="text-3xl text-white">
+        Ship DJ Toggle's new music app the fastest
+      </p>
+      <p class="pt-8 text-white">Get ready to get ship done!</p>
+    </div>
+  </div>
+  <div class="relative h-[300px] w-[300px] bg-cardgrey">
+    <a href="/workshop/task-1/1-creating-first-feature/" class="no-underline">
+      <img src="/note.png" class="absolute top-0 right-0" />
+      <p class="tasktext text-gradient mt-6 ml-4 text-[22px] font-sohne uppercase">Task # 1</p>
+      <div class="absolute bottom-5 mx-4">
+        <p class="cardbodytext w-2/3 pb-4">Track Selector</p>
+        <p class="cardbottomtext text-white">
+          Your first feature flag, launching the new track selection
+        </p>
+      </div>
+    </a> 
+  </div>
+
+  <div class="relative h-[300px] w-[300px] bg-cardgrey">
+    <a href="/workshop/task-2/0-mission-brief/" class="no-underline">
+      <img src="/rotate.png" class="absolute top-0 right-0" />
+      <p class="tasktext text-gradient mt-6 ml-4 text-[22px] font-sohne uppercase">Task # 2</p>
+      <div class="absolute bottom-5 mx-4">
+        <p class="text-white cardbodytext w-2/3 pb-4">Track History</p>
+        <p class="cardbottomtext text-white">
+          Ramping up and releasing our new track history selector - Derisk Release
+        </p>
+      </div>
+    </a> 
+  </div>
+
+  <div class="relative h-[300px] w-[300px] bg-cardgrey">
+    <a href="/workshop/task-3/1-playlists_trendingnow_more/" class="no-underline">
+      <img src="/play.png" class="absolute top-0 right-0" />
+      <p class="tasktext text-gradient mt-6 ml-4 text-[22px] font-sohne uppercase">Task # 3</p>
+      <div class="absolute bottom-5 mx-4">
+        <p class="text-white cardbodytext w-2/3 pb-4">Lists and Trends</p>
+        <p class="cardbottomtext text-white">
+          Release our new playlists and trending hits features - Targeting Developer
+        </p>
+      </div>
+    </a> 
+  </div>
+  <div class="relative h-[300px] w-[300px] bg-cardgrey">
+    <a href="/workshop/task-4/1-ai-playlist/" class="no-underline">
+      <img src="/sparkle.png" class="absolute top-0 right-0" />
+      <p class="tasktext text-gradient mt-6 ml-4 text-[22px] font-sohne uppercase">Task # 4</p>
+      <div class="absolute bottom-5 mx-4">
+        <p class="text-white cardbodytext w-2/3 pb-4">AI Playlists</p>
+        <p class="cardbottomtext text-white">
+          AI Playlists
+        </p>
+      </div>
+    </a> 
+  </div>
+  <div class="relative h-[300px] w-[300px] bg-cardgrey">
+    <a href="/workshop/task-5/1-release-guardian/" class="no-underline">
+      <img src="/sparkle.png" class="absolute top-0 right-0" />
+      <p class="tasktext text-gradient mt-6 ml-4 text-[22px] font-sohne uppercase">Task # 5</p>
+      <div class="absolute bottom-5 mx-4">
+        <p class="text-white cardbodytext w-2/3 pb-4">Release Guardian</p>
+        <p class="cardbottomtext text-white">
+          Release Guardian
+        </p>
+      </div>
+    </a> 
+  </div>
+</div>
