@@ -50,10 +50,10 @@ export default defineConfig({
   trailingSlash: "never",
   output: 'server',
   adapter: netlify(),
-  output: "hybrid",
-  adapter: node({
-    mode: 'standalone',
-  }),
+//   output: "hybrid",
+//   adapter: node({
+//     mode: 'standalone',
+//   }),
   server: {
     port: 3000,
     host: true
