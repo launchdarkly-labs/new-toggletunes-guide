@@ -11,41 +11,22 @@ Users want the ability to create and save their playlists in a sidebar component
 
 The developers have already prepped the code and it's ready, but we don't need to wait for the pipeline. Let's create our new feature, and release it to the users!
 
-### Objective\: Another minute, another launch — Create another feature flag!
+### Objective\: Another minute, another launch. Launch that new feature!
 
-Open your LaunchDarkly project and click `create flag`, choose the `Release` option and then follow these steps:
+Open your LaunchDarkly project and click `2 - Release Saved Playlist Sidebar`. We saved time and created the `Release` flag for you.
 
-### Flag Variations
+<img src="/releaseSidebar.png" />
 
-<img src='/releaseFlag.png' />
+Go through and flip on the switch to turn on the flag. Make sure it is `Available` when the flag is on.
 
-Select the `Boolean` option and fill in the variations with this information:
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">
-    Flag Name:{" "}
-  </span>
-    <CopyField value="release-saved-playlists-sidebar" client:load />
-</div>
+Flip back to the site and you see that the sidebar is messed up with red and purple backgrounds!
 
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
-  <CopyField value="release-saved-playlists-sidebar" client:load />
-</div>
-
-<div className="text-lg font-bold text-blue-500">
-Default variations:{" "}
-<span className="text-black dark:text-white font-normal">Set to serve 'Available' when targeting is ON</span>
-
-</div>
-
-Once this is complete, turn on the flag. Flip back to the site and you see that the sidebar is messed up with red and purple backgrounds!
-
-<img src='/brokenSidebar.png' />
+<img src="/brokenSidebar.png" />
 
 With the power of LaunchDarkly, you can hide the broken component within 200 ms with a flip of a switch.
 
 Flip the switch to hide the sidebar.
 
-<img src='/turnOffFlagSidebar.png' />
+<img src="/turnOffFlagSidebar.png" />
 
 Task two conquered. 😎
