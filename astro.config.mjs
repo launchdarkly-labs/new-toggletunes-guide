@@ -46,7 +46,7 @@ export default defineConfig({
     }]
   }), react(), expressiveCode(astroExpressiveCodeOptions), tailwind(), mdx()],
   name: "LaunchDarkly ToggleTunes Booth Experience",
-  base: "/",
+ 
   trailingSlash: "never",
   output: 'server',
   image: {
