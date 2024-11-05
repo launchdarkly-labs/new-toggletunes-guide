@@ -1,4 +1,4 @@
-import styles from "@styles/index.module.css";
+// import styles from "@styles/index.module.css";
 import { Copy } from 'lucide-react';
 import {motion} from 'framer-motion'
 
