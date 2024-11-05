@@ -49,10 +49,10 @@ export default defineConfig({
  
   trailingSlash: "never",
   output: 'server',
-  image: {
-    // Example: Use a custom image endpoint
-    endpoint: '/public',
-  },
+//   image: {
+//     // Example: Use a custom image endpoint
+//     endpoint: '/public',
+//   },
   adapter: netlify(),
 //   output: "hybrid",
 //   adapter: node({
