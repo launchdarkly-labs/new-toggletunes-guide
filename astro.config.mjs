@@ -51,7 +51,7 @@ export default defineConfig({
   output: 'server',
 //   image: {
 //     // Example: Use a custom image endpoint
-//     endpoint: '/public',
+//     endpoint: '',
 //   },
   adapter: netlify(),
 //   output: "hybrid",
