@@ -13,30 +13,7 @@ We want to avoid releasing a broken feature again to everyone, so we want our De
 Let's ship these features, and keep the good vibes rollin'.
 
 ### Objective\: New Feature Flag
-Open your LaunchDarkly project and click `create flag`, choose the `Release` option and then follow these steps:
-
-### Flag Variations
-
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">
-    Flag Name:{" "}
-  </span>
-    <CopyField value="release-new-users-playlist" client:load />
-</div>
-
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
-  <CopyField value="release-new-users-playlist" client:load />
-</div>
-
-<img src='/releaseFlag.png' />
-
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">
-     Default Rule{" "}
-  </span>
-  when "On" is "Unavailable"
-</div>
+Open your LaunchDarkly project and click `3 - Release New Users Playlist`. We saved time and created the `Release` flag for you.
 
 Now, we're ready to target our Developers.
 
@@ -51,6 +28,13 @@ On the flag details page for our new flag, under **'Rules'** section, click on t
 Copy what you see in the image above. 
 
 Here is the rule: Context kind **'user'**, Attribute  **'role'**, Operator **'is one of '**, Values **'Developer'**.
+
+<div className="flex items-center space-x-3">
+  <span className="text-lg text-blue-500 font-bold">
+    Target Value:{" "}
+  </span>
+    <CopyField value="Developer" client:load />
+</div>
 
 Roll out **'Available'** for **'Developer'** ONLY. 
 
