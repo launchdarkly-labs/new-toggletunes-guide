@@ -1,38 +1,53 @@
 ---
 sidebar_position: 1
-title: Task Five - Release Guardian
+title: Task Five - Release Edition
 ---
 
 import CopyField from "../../../../components/copyfield.tsx";
 
-## Releasing new AD Bar with Release Guardian for Protection
+## Releasing new AD Bar with Release Edition for Protection
 
 Thanks to your help, ToggleTunes is now one of the most popular music applications! Let's celebrate by rewarding our most loyal subscribers with exciting new features! DJ Toggle is launching a new platinum experience that offers new books, concerts, and more!
 
-### Objective: Releasing new AD Bar with Release Guardian for Protection
+This is your starting point.
+<img src="/cohereHomePage1.png" />
 
-We also want to use LaunchDarkly's Release Guardian feature to keep track of the app's latency and error rates after releasing the new UI to further insure we have a successful release.
+### Objective: Releasing new AD Bar with Release Edition for Protection
 
+We also want to use LaunchDarkly's Release Edition feature to keep track of the app's latency and error rates after releasing the new UI to further insure we have a successful release.
 
 ### Flag Variations
 
 Open your LaunchDarkly project and click `5 - Release New Ad Sidebar`. We saved time and created the `Release` flag for you.
 
-
+Click **Edit**.
 <img src='/releaseGuardian/1rgEdit.png' />
+
+Click the **dropdown** and choose **Available**.
 <img src='/releaseGuardian/2rgAvailable.png' />
-<img src='/releaseGuardian/3rgGuardedRollout.png' />
+
+Click **Add rollout**.
+<img src='/releaseGuardian/3rgGuardedRollout1.png' />
+
+In the dropdown, click **Guarded Rollout**.
+<img src='/releaseGuardian/3rgGuardedRollout2.png' />
+
+In the modal, in the `Add guarded rollout metrics to your flag`, add the existing `metrics` **Website Error Rate** and **Website Latency Rate**.
+
+These metrics are added in your app already and they send `error rate`and `latency rate` data from your app to LaunchDarkly.
+
 <img src='/releaseGuardian/4rgMetrics.png' />
+
+Flip the switch from `Off` to **On** and click the checkbox **Automatically roll back rule if a regression is detached**.
 <img src='/releaseGuardian/5rgModal.png' />
+
+Click **Review and Save** to release the feature.
 <img src='/releaseGuardian/6rgReviewSave.png' />
+
+You now have **Release Edition** running on your app for the new sidebar ui!
 <img src='/releaseGuardian/7rgReleased.png' />
 
 
-<div className="flex items-center text-lg font-bold text-blue-500">
-  Default Targeting:{" "}
-  <span className="text-black dark:text-white font-normal">when "On" is "Available"</span>
-</div>
-
 <img src='/releaseGuardian/adSidebarUI.png' />
 
-## Task Done!
+## Everything Done!
