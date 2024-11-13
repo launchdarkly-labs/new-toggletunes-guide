@@ -13,28 +13,23 @@ Now, with the help of LaunchDarkly, new features can go live almost instantly, a
 
 No new installs. No big reloads. Let’s get ship done! 
 
+
+This is your starting point.
+<img src='/release1/0.png' />
+
 ### Objective: Create the project’s first feature flag in LaunchDarkly
 
 
-Open your LaunchDarkly project and click `create flag`, choose the `Release` option and then follow these steps:
+Open your LaunchDarkly project and click **Create Flag**:
 
-<img src='/release1/0.png' />
 <img src='/release1/1.png' />
 <img src='/release1/2.png' />
-<img src='/release1/3.png' />
-<img src='/release1/4.png' />
-<img src='/release1/5.png' />
-<img src='/release1/6.png' />
-<img src='/release1/7.png' />
-<img src='/release1/8.png' />
-<img src='/release1/9.png' />
-<img src='/release1/10.png' />
-<img src='/release1/11.png' />
-<img src='/release1/12.png' />
-<img src='/release1/13.png' />
-
 
 ### Creating your first flag
+
+<img src='/release1/3.png' />
+
+Copy and paste the fields from below into the `Name` field. The `Key` field should auto-populate.
 
 
 <div className="flex items-center space-x-3">
@@ -43,13 +38,54 @@ Open your LaunchDarkly project and click `create flag`, choose the `Release` opt
   </span>
     <CopyField value="release-tracklist" client:load />
 </div>
-<div className="flex items-center space-x-3">
+
+{/* <div className="flex items-center space-x-3">
   <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
   <CopyField value="release-tracklist" client:load />
+</div> */}
+
+Scroll down a bit and click on **Release** button to make the flag into a Release Flag.
+
+<img src='/release1/4.png' />
+
+Automatically, the flag configs should be like below. **You don't have to do anything**.
+<img src='/release1/5.png' />
+
+Add **release** in the `Tags` field.
+
+<img src='/release1/6.png' />
+
+Copy and paste from the below.
+<div className="flex items-center space-x-3">
+  <span className="text-lg text-blue-500 font-bold">Tag Text</span>
+  <CopyField value="release" client:load />
 </div>
 
-### Flag Variations
 
+Click **Review and Save**
+<img src='/release1/7.png' />
+
+Here is your new flag you created!
+<img src='/release1/8.png' />
+
+Time to release the flag!
+
+Go to **edit**
+<img src='/release1/9.png' />
+
+Go to the dropdown and change to **Available**.
+<img src='/release1/10.png' />
+
+Flip the switch from `Off` to **On**.
+<img src='/release1/11.png' />
+
+Click **Review and Save** to release the feature.
+<img src='/release1/12.png' />
+
+Flag is released.
+<img src='/release1/13.png' />
+
+{/* ### Flag Variations
 
 Select the `Boolean` option and fill in the variations with this information:
 
@@ -58,8 +94,9 @@ Default variations:{" "}
 <span className="text-black dark:text-white font-normal">Set to serve 'Available' when targeting is ON</span>
 </div>
 
-Turn on targeting to enable the new features and see the changes within the ToggleTunes interface!
+Turn on targeting to enable the new features and see the changes within the ToggleTunes interface! */}
 
+Here is your new feature!
 <img src='/release2/9.png' />
 
-You're on the board! The new track selector is live in less than 200ms!
+## You're on the board! The new track selector is live in less than 200ms!
