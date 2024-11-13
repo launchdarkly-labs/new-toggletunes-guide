@@ -19,14 +19,9 @@ Open your LaunchDarkly project and click `4 - Change AI Model for AI Playlist Cr
 
 <img src="/ai/1aiFlag.png" />
 <img src="/ai/2aiEdit.png" />
-<img src="/ai/3aiCopy.png" />
-<img src="/ai/4aiSaveEdits.png" />
-<img src="/ai/5aiComments.png" />
-<img src="/ai/6aiTargeting.png" />
-<img src="/ai/7aiOnSave.png" />
-<img src="/ai/8aiEditAgain.png" />
-<img src="/ai/9aiCohere.png" />
-<img src="/ai/10aiReview.png" />
+
+
+
 
 
 It should look like this above.
@@ -80,17 +75,40 @@ For **'Meta Lama'**:
   />
 </div>
 
+<img src="/ai/3aiCopy.png" />
 
-<div className="flex items-center text-lg font-bold text-blue-500">
-  Default Targeting:{" "}
-  <span className="text-black dark:text-white font-normal">when "On" is "Available"</span>
+<img src="/ai/4aiSaveEdits.png" />
+
+<img src="/ai/5aiComments.png" />
+
+
+<div className="flex items-center space-x-3">
+  <span className="text-lg text-blue-500 font-bold">
+    Comment:{" "}
+  </span>
+    <CopyField value="changed values" client:load />
 </div>
 
-First release Anthropic
+<div className="flex items-center space-x-3">
+  <span className="text-lg text-blue-500 font-bold">
+    Value:{" "}
+  </span>
+    <CopyField value="release-ai-playlist-creator" client:load />
+</div>
 
-<img src="/claudeFlagVariation.png" />
+Go back to the **'Targeting'** tab.
 
-Click generate playlist
+<img src="/ai/6aiTargeting.png" />
+
+### Releasing AI Flag
+
+First release **'Anthropic'**.
+
+Flip the switch **'On'** and **'Review and Save'**  to release the feature.
+
+<img src="/ai/7aiOnSave.png" />
+
+Click **'Generate Your Playlist'**
 
 <img src="/claudeHomePage1.png" />
 
@@ -102,12 +120,22 @@ Finished!
 
 <img src="/claudeHomePage3.png" />
 
-Then release Cohere
+Then release **'Cohere Coral'**
 
-<img src="/cohereFlagVariation.png" />
+Go back to the flag in the LaunchDarkly dashboard and press **'Edit'**. 
 
-You can see there Cohere is now changed. For the sake of time, we aren't going to generate a 2nd playlist.
+<img src="/ai/8aiEditAgain.png" />
+
+Click the dropdown and change to **'Cohere Coral'**. 
+
+<img src="/ai/9aiCohere.png" />
+
+Click **'Review and Save'** in order to release the new flag variation. 
+
+<img src="/ai/10aiReviewSave.png" />
+
+You can see there that the flag variation is changed to **'Cohere Coral'**. For the sake of time, we aren't going to generate a 2nd playlist.
 
 <img src="/cohereHomePage1.png" />
 
-Task done!
+## Task Done!
