@@ -15,26 +15,15 @@ Using LaunchDarkly AI Model flag, we can switch out AI models real time to see w
 
 ### Flag Variations
 
-Open your LaunchDarkly project and click `create flag`, choose the `Release` option and then follow these steps:
+Open your LaunchDarkly project and click `4 - Change AI Model for AI Playlist Creator`. We saved time and created the `Release` flag for you.
 
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Name: </span>
-  <CopyField value="release-ai-playlist-creator" client:load />
-</div>
-
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
-  <CopyField value="release-ai-playlist-creator" client:load />
-</div>
-
-<img src='/aiModelFlagCreate.png' />
+<img src="/aiModelFlagCreate.png" />
 
 It should look like this above.
 
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Name:</span>
-  <CopyField value="Anthropic Claude Haiku" client:load />
-</div>
+Now copy the AI moodel values into their corresponding names.
+
+For **'Anthropic Claude Haiku'**:
 
 <div className="flex items-center space-x-3">
   <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
@@ -49,10 +38,7 @@ It should look like this above.
   />
 </div>
 
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Name:</span>
-  <CopyField value="Cohere Coral" client:load />
-</div>
+For **'Cohere Coral'**:
 
 <div className="flex items-center space-x-3">
   <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
@@ -68,6 +54,24 @@ It should look like this above.
   />
 </div>
 
+For **'Meta Lama'**:
+
+<div className="flex items-center space-x-3">
+  <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
+  <CopyField
+    value={`{
+  {
+    "max_gen_len": 1000,
+    "modelId": "meta.llama2-13b-chat-v1",
+    "temperature": 0.9,
+    "top_p": 1
+}
+}
+`}
+    client:load
+  />
+</div>
+
 <div className="flex items-center text-lg font-bold text-blue-500">
   Default Targeting:{" "}
   <span className="text-black dark:text-white font-normal">when "On" is "Available"</span>
@@ -75,19 +79,26 @@ It should look like this above.
 
 First release Anthropic
 
-<img src='/claudeFlagVariation.png' />
+<img src="/claudeFlagVariation.png" />
 
 Click generate playlist
-<img src='/claudeHomePage1.png' />
 
-<img src='/claudeHomePage2.png' />
-<img src='/claudeHomePage3.png' />
+<img src="/claudeHomePage1.png" />
+
+Generating...
+<img src="/claudeHomePage2.png" />
+
+Finished!
+<img src="/claudeHomePage3.png" />
 
 Then release Cohere
 
-<img src='/cohereFlagVariation.png' />
+<img src="/cohereFlagVariation.png" />
 
 You can see there Cohere is now changed. For the sake of time, we aren't going to generate a 2nd playlist.
-<img src='/cohereHomePage1.png' />
+
+<img src="/cohereHomePage1.png" />
+
+Task done!
 {/* <img src='/cohereHomePage2.png' />
 <img src='/cohereHomePage3.png' /> */}
