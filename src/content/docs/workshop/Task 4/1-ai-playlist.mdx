@@ -9,6 +9,9 @@ import CopyField from "../../../../components/copyfield.tsx";
 
 Thanks to your help, ToggleTunes is now one of the most popular music applications! Let's celebrate by rewarding our most loyal subscribers with exciting new features! DJ Toggle is launching a new platinum experience that offers new books, concerts, and more!
 
+This is your starting point.
+<img src="/targeting/newUIDeveloperOnly.png" />
+
 ### Objective: Launch the AI DJ Playlist generator using LaunchDarkly's AI Model Control.
 
 Using LaunchDarkly AI Model flag, we can switch out AI models real time to see which AI generated playlist works well for our users.
@@ -17,21 +20,18 @@ Using LaunchDarkly AI Model flag, we can switch out AI models real time to see w
 
 Open your LaunchDarkly project and click `4 - Change AI Model for AI Playlist Creator`. We saved time and created the `Release` flag for you.
 
+On the right hand side for `Variations`, click the **Pencil Icon** to edit variations.
 <img src="/ai/1aiFlag.png" />
+
+You will now see a new page to edit the `Variations` of the AI flags.
 <img src="/ai/2aiEdit.png" />
 
+Now copy the information below into the `Values` field into their corresponding names.
 
-
-
-
-It should look like this above.
-
-Now copy the AI moodel values into their corresponding names.
-
-For **'Anthropic Claude Haiku'**:
+For `Name` **'Anthropic Claude Haiku'**:
 
 <div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
+  <span className="text-lg text-blue-500 font-bold">Value:</span>
   <CopyField
     value={`{
   "max_tokens_to_sample": 1000,
@@ -43,10 +43,10 @@ For **'Anthropic Claude Haiku'**:
   />
 </div>
 
-For **'Cohere Coral'**:
+For `Name` **'Cohere Coral'**:
 
 <div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
+  <span className="text-lg text-blue-500 font-bold">Value:</span>
   <CopyField
     value={`{
   "max_tokens": 1000,
@@ -59,10 +59,10 @@ For **'Cohere Coral'**:
   />
 </div>
 
-For **'Meta Lama'**:
+For `Name` **'Meta Lama'**:
 
 <div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Flag Key:</span>
+  <span className="text-lg text-blue-500 font-bold">Value:</span>
   <CopyField
     value={`{
     "max_gen_len": 1000,
@@ -75,13 +75,17 @@ For **'Meta Lama'**:
   />
 </div>
 
+It should look like the below.
 <img src="/ai/3aiCopy.png" />
 
+Click **Review and Save** to save the changes.
 <img src="/ai/4aiSaveEdits.png" />
 
+
+In the `Comments` and `Confirm` field, copy the values below:
 <img src="/ai/5aiComments.png" />
 
-
+Copy the values below:
 <div className="flex items-center space-x-3">
   <span className="text-lg text-blue-500 font-bold">
     Comment:{" "}
@@ -91,7 +95,7 @@ For **'Meta Lama'**:
 
 <div className="flex items-center space-x-3">
   <span className="text-lg text-blue-500 font-bold">
-    Value:{" "}
+    Confirm:{" "}
   </span>
     <CopyField value="release-ai-playlist-creator" client:load />
 </div>
