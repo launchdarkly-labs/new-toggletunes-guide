@@ -12,43 +12,56 @@ We want to avoid releasing a broken feature again to everyone, so we want our De
 
 Let's ship these features, and keep the good vibes rollin'.
 
+This is your starting point.
+<img src='/release2/9.png' />
+
 ### Objective\: New Feature Flag
 Open your LaunchDarkly project and click `3 - Release New Users Playlist`. We saved time and created the `Release` flag for you.
 
+<img src='/targeting/1.png' />
+
 Now, we're ready to target our Developers.
 
-This feature will be toggled “off” for most of our users.  However, our Developers will be able to access these experiences by targeting these users specifically upon release.
+Click **Add rule**.
+<img src='/targeting/2.png' />
+
+Click **Target segments** in the dropdown.
+<img src='/targeting/3.png' />
+
 
 ### Targeting Only Internal Developer to Test New UI Feature in Production
 
-On the flag details page for our new flag, under **'Rules'** section, click on the dropdown **'Add rule'**, and within the Add rule, select our **'Build a custom rule'** segment.
 
-<img src='/targeting/1.png' />
-<img src='/targeting/2.png' />
-<img src='/targeting/3.png' />
 
-Roll out **'Available'** for **'Developer'** ONLY. 
+You are creating your targeting rule to target who can only see the new feature.
+
+In the dropdown, in the `Segments` field, click on **Developers**. This is a `segment` that we already created.
 <img src='/targeting/4.png' />
+
+In `Rollout`, select **Available**.
 <img src='/targeting/5.png' />
-<img src='/targeting/6.png' />
+{/* <img src='/targeting/6.png' /> */}
 
+This feature will be toggled “off” for most of our users.  However, our Developers will be able to access these experiences by targeting these users specifically upon release.
 
-
-
+Flip the switch from `Off` to **On**.
 <img src='/targeting/7.png' />
+
+Click **Review and Save** to release the feature.
 <img src='/targeting/8.png' />
+
+You have released the feature to **Developers** only!
 <img src='/targeting/9.png' />
 
+Now go back to the app.
 
-**'Default Rule'** should be  **'Unavailable'**. This will allow your Developer to only see the new UI.
-
-Save the changes. Finally, turn the flag to **'On'** .
-
-
-In the upper right hand corner,  **'Click on the picture'** to switch users.
+In the upper right hand corner,  **Click on the picture** to switch users.
 
 <img src='/newUIStandardUser.png' />
 
+In the upper right hand corner, it should be  **'Platinum, Developer'**.
+
+Now you can see the new UI!
 <img src='/newUIDeveloperOnly.png' />
 
 With our toggle and serve section set to “Available” and our Developer targeted correctly, Developer can see the new UI feature and test the feature in production. Bonus points for not breaking a sweat or writing a single line of code in the process.
