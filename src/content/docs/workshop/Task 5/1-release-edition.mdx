@@ -32,26 +32,23 @@ Click **Add rollout**.
 In the dropdown, click **Guarded Rollout**.
 <img src='/releaseGuardian/3rgGuardedRollout2.png' />
 
-In the modal, in the `Add guarded rollout metrics to your flag`, add the existing `metrics` **Website Error Rate** and **Website Latency Rate**.
+In the new section `Guarded rollout setup`, in the `Metrics to monitor`, add the existing `metrics` **Website Error Rate** and **Website Latency Rate**.
 
 These metrics are added in your app already and they send `error rate`and `latency rate` data from your app to LaunchDarkly.
 
 <img src='/releaseGuardian/10.png' />
-
-Flip the switch from `Off` to **On** and click the checkbox **Automatically roll back rule if a regression is detached**.
 <img src='/releaseGuardian/11.png' />
 
-Click **Review and Save** to release the feature.
+Click the checkbox **Automatically roll back rule if a regression is detached**.
 <img src='/releaseGuardian/12.png' />
 
-You now have **Release Edition** running on your app for the new sidebar ui!
+Click **Review and Save** to release the feature.
 <img src='/releaseGuardian/13.png' />
+
+You now have **Release Edition** running on your app for the new sidebar ui!
 <img src='/releaseGuardian/14.png' />
 
-
-<h3> There is 50% change of seeing the AD Sidebar because of the release edition feature.</h3>
-<h3> If you don't see the AD Sidebar on the right hand side, toggle the **user profile on the upper righthand side** until you see the AD Sidebar. </h3>
-
+Now go back to your app, and press have **Validate Release Guardian** to speed up the release guardian processs.
 <img src='/releaseGuardian/15.png' />
 
 Now you should see the AD Sidebar
