@@ -28,7 +28,7 @@ You will now see a new page to edit the `Variations` of the AI flags.
 
 Now copy the information below into the `Values` field into their corresponding names.
 
-For `Name` **'Anthropic Claude Haiku**:
+For `Name` **'Anthropic Claude Instant**:
 
 <div className="flex items-center space-x-3">
   <span className="text-lg text-blue-500 font-bold">Value:</span>
@@ -59,21 +59,6 @@ For `Name` **'Cohere Command'**:
   />
 </div>
 
-For `Name` **'Meta Llama'**:
-
-<div className="flex items-center space-x-3">
-  <span className="text-lg text-blue-500 font-bold">Value:</span>
-  <CopyField
-    value={`{
-    "max_gen_len": 1000,
-    "modelId": "meta.llama2-13b-chat-v1",
-    "temperature": 0.9,
-    "top_p": 1
-}
-`}
-    client:load
-  />
-</div>
 
 It should look like the below.
 <img src="/ai/3aiCopy.png" />
@@ -106,7 +91,7 @@ Go back to the **'Targeting'** tab.
 
 ### Releasing AI Flag
 
-First release **'Anthropic Claude Haiku'**.
+First release **'Anthropic Claude Instant'**.
 
 Flip the switch **'On'** and **'Review and Save'**  to release the feature.
 
@@ -124,13 +109,13 @@ Finished!
 
 <img src="/claudeHomePage3.png" />
 
-Then release **'Cohere Coral'**
+Then release **'Cohere Command'**
 
 Go back to the flag in the LaunchDarkly dashboard and press **'Edit'**. 
 
 <img src="/ai/8aiEditAgain.png" />
 
-Click the dropdown and change to **'Cohere Coral'**. 
+Click the dropdown and change to **'Cohere Command'**. 
 
 <img src="/ai/9aiCohere.png" />
 
